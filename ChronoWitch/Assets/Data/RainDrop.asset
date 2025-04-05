@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a396065b942a2418345e1b65968698, type: 3}
+  m_Name: RainDrop
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Rain Drop
+  <Description>k__BackingField: Sky juice with big drama energy
+  <ItemImage>k__BackingField: {fileID: 3660693438397358955, guid: 5670534347f41a24fa9fe163fb0acd2b, type: 3}

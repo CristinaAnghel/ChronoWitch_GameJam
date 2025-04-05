@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a396065b942a2418345e1b65968698, type: 3}
+  m_Name: Spider
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Spider
+  <Description>k__BackingField: Will build a house in your face if you blink too
+    long!
+  <ItemImage>k__BackingField: {fileID: -261153787911907513, guid: be27a164ad6bf9245b0db120410ed41f, type: 3}

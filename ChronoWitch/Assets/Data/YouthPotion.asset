@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765ff61c6e495b940a586af2fd1303b6, type: 3}
+  m_Name: YouthPotion
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Youth potion
+  <Description>k__BackingField: May cause giggling, tree climbing, and a sudden craving
+    for snacks shaped like dinosaurs!
+  <ItemImage>k__BackingField: {fileID: -1646267367279109687, guid: 7d27a2c2df2d8ef4bb51af8866b91052, type: 3}
+  modifierData: []
+  <actionSFX>k__BackingField: {fileID: 0}

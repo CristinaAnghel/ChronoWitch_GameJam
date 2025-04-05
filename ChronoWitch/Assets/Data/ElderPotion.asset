@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765ff61c6e495b940a586af2fd1303b6, type: 3}
+  m_Name: ElderPotion
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Elder Potion
+  <Description>k__BackingField: Widom in a bottle... and possibly a mysterious cough!
+  <ItemImage>k__BackingField: {fileID: 1141548718132687190, guid: 3b6c5822f04df9b4687b60ceb3617874, type: 3}
+  modifierData: []
+  <actionSFX>k__BackingField: {fileID: 0}
