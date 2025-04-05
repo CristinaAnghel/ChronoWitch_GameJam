@@ -10,7 +10,16 @@ public class PotionItemSO : Item, IDestroyableItem, IItemAction
     public string ActionName => "Drink";
 
     [field: SerializeField]
+    public int modify { get; private set; }
+
+    [field: SerializeField]
     public AudioClip actionSFX {get; private set;}
+
+    [field: SerializeField]
+    public int addTime { get; private set; }
+
+    [field: SerializeField]
+    public float timeTillDeath { get; private set; }
 
     public bool PerformAction(GameObject character)
     {

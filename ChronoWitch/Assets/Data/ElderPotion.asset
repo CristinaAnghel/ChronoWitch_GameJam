@@ -16,4 +16,6 @@ MonoBehaviour:
   <Description>k__BackingField: Widom in a bottle... and possibly a mysterious cough!
   <ItemImage>k__BackingField: {fileID: 1141548718132687190, guid: 3b6c5822f04df9b4687b60ceb3617874, type: 3}
   modifierData: []
+  <modify>k__BackingField: 2
   <actionSFX>k__BackingField: {fileID: 0}
+  <timeTillDeath>k__BackingField: 30

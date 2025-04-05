@@ -1,12 +1,17 @@
 using UnityEngine;
 public class PlayerAgeSwitcher : MonoBehaviour
 {
+    [SerializeField] private Timer timer;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip changeAgeClip;
+    public string state;
     public enum PlayerFormType
     {
         Past,
         Present,
         Future
     }
+    
 
     public GameObject[] playerForms; // Assign in Inspector
     private int currentIndex = 0;
@@ -18,6 +23,7 @@ public class PlayerAgeSwitcher : MonoBehaviour
 
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.T))
         {
             // Save position of current form
@@ -40,6 +46,35 @@ public class PlayerAgeSwitcher : MonoBehaviour
             // Enable new form
             playerForms[currentIndex].SetActive(true);
         }
+        */
+    }
+
+    public void SwitchAge(int index, float timeTillDeath)
+    {
+        audioSource.PlayOneShot(changeAgeClip);
+        timer.ChangeTime(timeTillDeath);
+        Debug.Log(playerForms[index]);
+        Vector3 currentPos = playerForms[currentIndex].transform.position;
+        playerForms[currentIndex].SetActive(false);
+        currentIndex = index;
+        state = GetAgeState(currentIndex);
+        timer.ChangeAgeState(state);
+        playerForms[currentIndex].transform.position = currentPos;
+        Rigidbody2D rb = playerForms[currentIndex].GetComponent<Rigidbody2D>();
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+        playerForms[currentIndex].SetActive(true);
+    }
+
+    public string GetAgeState(int currentIndex)
+    {
+        if (currentIndex == 0)
+            state = "Present";
+        else if (currentIndex == 1)
+            state = "Past";
+        else
+            state = "Future";
+        return state;
     }
 
     void SetActiveForm(int index)

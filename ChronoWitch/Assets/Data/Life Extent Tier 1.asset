@@ -18,4 +18,7 @@ MonoBehaviour:
 '
   <ItemImage>k__BackingField: {fileID: 1253187859281695606, guid: 7a5024568232f4e448f3ec15ecbc5551, type: 3}
   modifierData: []
+  <modify>k__BackingField: 0
   <actionSFX>k__BackingField: {fileID: 0}
+  <addTime>k__BackingField: 5
+  <timeTillDeath>k__BackingField: 0

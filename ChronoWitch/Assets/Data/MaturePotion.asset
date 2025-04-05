@@ -17,4 +17,6 @@ MonoBehaviour:
     and mortgages!
   <ItemImage>k__BackingField: {fileID: -7782496847636459353, guid: 8127fd44c8a948f438e0d372fa40ff73, type: 3}
   modifierData: []
+  <modify>k__BackingField: 0
   <actionSFX>k__BackingField: {fileID: 0}
+  <timeTillDeath>k__BackingField: 60

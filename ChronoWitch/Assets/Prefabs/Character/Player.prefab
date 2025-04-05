@@ -70,7 +70,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8017735869643949355}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c4c590b4863d0f4e90deba130f17ed6, type: 3}
   m_Name: 
@@ -131,7 +131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1643027884012130565, guid: 153175989ca932440be3a310985cc7aa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2163207293725292974, guid: 153175989ca932440be3a310985cc7aa, type: 3}
       propertyPath: m_FlipX
@@ -335,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2344568836177084559, guid: d501102cbde1bdb43a2d53082dff01ab, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3423896500201457463, guid: d501102cbde1bdb43a2d53082dff01ab, type: 3}
       propertyPath: rb

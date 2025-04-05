@@ -17,4 +17,6 @@ MonoBehaviour:
     for snacks shaped like dinosaurs!
   <ItemImage>k__BackingField: {fileID: -1646267367279109687, guid: 7d27a2c2df2d8ef4bb51af8866b91052, type: 3}
   modifierData: []
+  <modify>k__BackingField: 1
   <actionSFX>k__BackingField: {fileID: 0}
+  <timeTillDeath>k__BackingField: 90

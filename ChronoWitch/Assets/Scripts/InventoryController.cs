@@ -6,13 +6,19 @@ public class InventoryController : MonoBehaviour
 {
     [SerializeField] private InventoryPage inventoryUI;
     [SerializeField] private InventorySO inventoryData;
+    [SerializeField] private PlayerAgeSwitcher ageSwitcher;
+    [SerializeField] private Timer timer;
 
     public List<InventoryItems> initialItems = new List<InventoryItems>();
 
     [SerializeField] private AudioClip dropClip;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip placeClip;
+    [SerializeField] private AudioClip drinkPotionClip;
 
+    public int modifyIndex;
+    public float timeTillDeath;
+    public int addTime;
 
     
     private void Start()
@@ -101,6 +107,16 @@ public class InventoryController : MonoBehaviour
             if (inventoryData.GetItemAt(itemIndex).isEmpty)
                 inventoryUI.ResetSelection();
 
+            audioSource.PlayOneShot(drinkPotionClip);
+            PotionItemSO potion = (PotionItemSO)inventoryItem.item;
+            modifyIndex = potion.modify;
+            timeTillDeath = potion.timeTillDeath;
+            addTime = potion.addTime;
+            if (addTime == 0)
+                ageSwitcher.SwitchAge(modifyIndex, timeTillDeath);
+            else
+                timer.AddTime(addTime);
+            //Debug.Log(modifyIndex);
         }
     }
 

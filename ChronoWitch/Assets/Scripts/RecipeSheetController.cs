@@ -10,10 +10,11 @@ public class RecipeSheetController : MonoBehaviour
             if (recipeSheet.IsShowing() == false)
             {
                 recipeSheet.Show();
-
+                Debug.Log("show");
             }
             else
             {
+                Debug.Log("hide");
                 recipeSheet.Hide();
             }
         }
