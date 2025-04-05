@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2727486223444544262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195940425538315622}
+  - component: {fileID: 7411928210241566089}
+  m_Layer: 0
+  m_Name: Crafting Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195940425538315622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2727486223444544262}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1161.376, y: 475.18848, z: -4.8662925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7411928210241566089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2727486223444544262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718679e0ea2601d49980d6a3c2505026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 11400000, guid: b639690ed25070b4f80d9cc460897349, type: 2}
+  inventoryUI: {fileID: 0}
+  buttonPrefab: {fileID: 2642779405732780209, guid: 3291f72dc6722ae409d738c6c6ade811, type: 3}
+  buttonParent: {fileID: 0}
+  brewed: {fileID: 8300000, guid: 1a4f2be13f3fa1841b94c42f0cc0ac69, type: 3}
+  audioSource: {fileID: 0}
+  recipes:
+  - SugarFirefly
+  - PolenMushroom
+  - Fall LeafRain Drop
+  - Rain DropSugar
+  - Rain DropSugarSpider
+  - Rain DropSugarSpiderGolden Fruit
+  recipeResults:
+  - {fileID: 11400000, guid: 732390cee39b2134f8a13fb97b47b2bd, type: 2}
+  - {fileID: 11400000, guid: 296d13bbf23ff2b4098d53edefc5385a, type: 2}
+  - {fileID: 11400000, guid: d5653acb65bd812408774192a67b1341, type: 2}
+  - {fileID: 11400000, guid: 1ea88d268bca9374f9649415db76a2f6, type: 2}
+  - {fileID: 11400000, guid: 8b22310306771494398e02e5c30e6cc7, type: 2}
+  - {fileID: 11400000, guid: 272916fd17137fe46b829d8fb95353da, type: 2}

@@ -11,6 +11,8 @@ public class InventoryController : MonoBehaviour
 
     [SerializeField] private AudioClip dropClip;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip placeClip;
+
 
     
     private void Start()
@@ -113,6 +115,7 @@ public class InventoryController : MonoBehaviour
 
     private void HandleswapItems(int itemIndex1, int itemIndex2)
     {
+        audioSource.PlayOneShot(placeClip);
         inventoryData.SwapItems(itemIndex1, itemIndex2);
     }
 
@@ -125,6 +128,7 @@ public class InventoryController : MonoBehaviour
             //return;
         }
         Item item = inventoryItem.item;
+
         inventoryUI.UpdateDescription(itemIndex, item.ItemImage, item.Name, item.Description);
     }
 

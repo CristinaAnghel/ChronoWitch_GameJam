@@ -166,6 +166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 7178604323228557464}
   borderImage: {fileID: 16174549967463124}
+  craftingIndex: 0
+  itemName: 
+  storedItem: {fileID: 0}
 --- !u!114 &4175106464351135222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.040106785, g: 0.07286969, b: 0.16226411, a: 1}
+  m_Color: {r: 0.24261302, g: 0.5471698, b: 0.36027196, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

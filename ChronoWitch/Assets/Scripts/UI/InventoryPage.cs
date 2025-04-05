@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine.UI;
 
 public class InventoryPage : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class InventoryPage : MonoBehaviour
     [SerializeField] private MouseFollower mouseFollower;
     [SerializeField] private RectTransform craftingPanel;
     [SerializeField] private RectTransform resultPanel;
+    [SerializeField] private AudioClip placeClip;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip openClip;
+    //[SerializeField] private GameObject buttonPrefab;
 
 
     List<InventoryItem> listOfItems = new List<InventoryItem>();
@@ -28,7 +33,9 @@ public class InventoryPage : MonoBehaviour
 
     private void Awake()
     {
-        Hide();
+        actionPanel.Toggle(false);
+        gameObject.SetActive(false);
+        ResetDraggedItem();
         itemDescription.ResetDescription();
         mouseFollower.Toggle(false);
     }
@@ -71,8 +78,18 @@ public class InventoryPage : MonoBehaviour
         item1.OnItemDroppedOn += HandleSwap;
         item1.OnItemEndDrag += HandleEndDrag;
         item1.OnRightMouseBtnClick += HandleShowItemActions;
-        
+
+        //AddButton("Brew", brewPotion);
     }
+
+    /*
+    public void AddButton(string name, Action onClickAction)
+    {
+        GameObject button = Instantiate(buttonPrefab, transform);
+        button.GetComponent<Button>().onClick.AddListener(() => onClickAction());
+        button.GetComponentInChildren<TMPro.TMP_Text>().text = name;
+    }
+    */
 
     internal void ResetAllItems()
     {
@@ -110,6 +127,7 @@ public class InventoryPage : MonoBehaviour
 
     private void HandleEndDrag(InventoryItem obj)
     {
+        audioSource.PlayOneShot(placeClip);
         ResetDraggedItem();
     }
 
@@ -133,6 +151,7 @@ public class InventoryPage : MonoBehaviour
 
     private void HandleBeginDrag(InventoryItem inventoryItem)
     {
+        //audioSource.PlayOneShot(placeClip);
         int index = listOfItems.IndexOf(inventoryItem);
         if (index == -1)
             return;
@@ -160,7 +179,7 @@ public class InventoryPage : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
-
+        audioSource.PlayOneShot(openClip);
         ResetSelection();
     }
 
@@ -193,6 +212,7 @@ public class InventoryPage : MonoBehaviour
 
     public void Hide()
     {
+        audioSource.PlayOneShot(openClip);
         actionPanel.Toggle(false);
         gameObject.SetActive(false);
         ResetDraggedItem();

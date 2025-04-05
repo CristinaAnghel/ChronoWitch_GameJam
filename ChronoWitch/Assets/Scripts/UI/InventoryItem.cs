@@ -17,7 +17,7 @@ public class InventoryItem : MonoBehaviour
     [SerializeField] private int craftingIndex;
     [SerializeField] private string itemName;
 
-    private Item storedItem;
+    [SerializeField] private Item storedItem;
 
     public void Awake()
     {
