@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7084337984177720357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703558936161323826}
+  - component: {fileID: 9015724780001880841}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703558936161323826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084337984177720357}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.13, y: -2.22, z: 13.276643}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9015724780001880841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084337984177720357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7d1c307a5e3f6498608e14e3240c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabs:
+  - {fileID: 6175696239283164096, guid: 9f5bc2632618c1242b26b6c026b21802, type: 3}
+  - {fileID: 1577629241677863124, guid: 62ffff2a9e050134ab675b6fd4bc773f, type: 3}
+  - {fileID: 5547641421065563184, guid: 9fea078e69b6afd42965e1703c040e8d, type: 3}
+  - {fileID: 7043966644178899167, guid: 35fa58ad34f889240b6a1d41921d1d6f, type: 3}
+  - {fileID: 8635251428465455525, guid: 854fd7f0960f56a499d7c2896b440205, type: 3}
+  - {fileID: 5501159646633406437, guid: de3fdc4f5ee373943b7be427528971a1, type: 3}
+  - {fileID: 6959840162272239510, guid: 21cf8f07642bb3143a99e9fe45bed2ed, type: 3}
+  - {fileID: 5547641421065563184, guid: 1fb7f7e9468abd040913c21e3e1a17e9, type: 3}
+  itemRarity: 0a00000007000000050000000a0000000a000000070000000700000005000000
+  Radius: 1

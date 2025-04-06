@@ -4,6 +4,10 @@ public class PlayerAgeSwitcher : MonoBehaviour
     [SerializeField] private Timer timer;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip changeAgeClip;
+    [SerializeField] private AudioClip youngMusic;
+    [SerializeField] private AudioClip adultMusic;
+    [SerializeField] private AudioClip oldMusic;
+
     public string state;
     public enum PlayerFormType
     {
@@ -19,6 +23,7 @@ public class PlayerAgeSwitcher : MonoBehaviour
     void Start()
     {
         SetActiveForm(currentIndex);
+        audioSource.PlayOneShot(GetMusic());
     }
 
     void Update()
@@ -51,6 +56,7 @@ public class PlayerAgeSwitcher : MonoBehaviour
 
     public void SwitchAge(int index, float timeTillDeath)
     {
+        audioSource.Stop();
         audioSource.PlayOneShot(changeAgeClip);
         timer.ChangeTime(timeTillDeath);
         Debug.Log(playerForms[index]);
@@ -59,6 +65,7 @@ public class PlayerAgeSwitcher : MonoBehaviour
         currentIndex = index;
         state = GetAgeState(currentIndex);
         timer.ChangeAgeState(state);
+        audioSource.PlayOneShot(GetMusic());
         playerForms[currentIndex].transform.position = currentPos;
         Rigidbody2D rb = playerForms[currentIndex].GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -96,5 +103,17 @@ public class PlayerAgeSwitcher : MonoBehaviour
             }
             currentIndex = newIndex;
         }
+    }
+
+
+    public AudioClip GetMusic()
+    {
+        if (state == "Past")
+            return youngMusic;
+        if (state == "Present")
+            return adultMusic;
+        if (state == "Future")
+            return oldMusic;
+        return adultMusic;
     }
 }

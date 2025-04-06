@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class Timer : MonoBehaviour
             else if (ageState == "Future")
             {
                 ChangeTime(0);
-                ChangeAgeState("Dead");
+                SceneManager.LoadScene("GameOver");
             }
         }
 

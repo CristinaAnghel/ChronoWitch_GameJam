@@ -12,6 +12,8 @@ public class Switch : MonoBehaviour
     public TMP_Text text2;
     public TMP_Text pov;
     public TMP_Text controls;
+    public Image gameImage;
+    public Image play;
     public TMP_Text controls1;
     int index;
 
@@ -30,6 +32,8 @@ public class Switch : MonoBehaviour
             pov.gameObject.SetActive(false);
             controls.gameObject.SetActive(true);
             controls1.gameObject.SetActive(true);
+            gameImage.gameObject.SetActive(true);
+            play.gameObject.SetActive(true);
         }
 
         if (index == 0)
@@ -39,6 +43,8 @@ public class Switch : MonoBehaviour
             pov.gameObject.SetActive(true);
             controls.gameObject.SetActive(false);
             controls1.gameObject.SetActive(false);
+            gameImage.gameObject.SetActive(false);
+            play.gameObject.SetActive(false);
         }
     }
 

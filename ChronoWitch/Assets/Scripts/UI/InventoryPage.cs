@@ -11,16 +11,17 @@ public class InventoryPage : MonoBehaviour
     [SerializeField] private InventoryItem craftingPrefab;
     [SerializeField] private RectTransform contentPanel;
     [SerializeField] private InventoryDescription itemDescription;
-    [SerializeField] private MouseFollower mouseFollower;
+    //[SerializeField] private MouseFollower mouseFollower;
     [SerializeField] private RectTransform craftingPanel;
     [SerializeField] private RectTransform resultPanel;
     [SerializeField] private AudioClip placeClip;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip openClip;
+    [SerializeField] private int startSize = 1;
     //[SerializeField] private GameObject buttonPrefab;
 
 
-    List<InventoryItem> listOfItems = new List<InventoryItem>();
+    public List<InventoryItem> listOfItems = new List<InventoryItem>();
 
     private int currentlyDraggedItemIndex = -1;
 
@@ -37,7 +38,7 @@ public class InventoryPage : MonoBehaviour
         gameObject.SetActive(false);
         ResetDraggedItem();
         itemDescription.ResetDescription();
-        mouseFollower.Toggle(false);
+        //mouseFollower.Toggle(false);
     }
 
     public void InitializeInventoryUI(int inventorySize)
@@ -145,7 +146,7 @@ public class InventoryPage : MonoBehaviour
 
     private void ResetDraggedItem()
     {
-        mouseFollower.Toggle(false);
+        //mouseFollower.Toggle(false);
         currentlyDraggedItemIndex = -1;
     }
 
@@ -164,8 +165,8 @@ public class InventoryPage : MonoBehaviour
 
     public void CreateDraggedItem(Sprite sprite, string name, Item item)
     {
-        mouseFollower.Toggle(true);
-        mouseFollower.SetData(sprite, name, item);
+        //mouseFollower.Toggle(true);
+        //mouseFollower.SetData(sprite, name, item);
     }
 
     private void HandleItemSelection(InventoryItem inventoryItem)
@@ -217,4 +218,34 @@ public class InventoryPage : MonoBehaviour
         gameObject.SetActive(false);
         ResetDraggedItem();
     }
+
+    
+    public void AddSize()
+    {
+        startSize++;
+    }
+
+
+    public void DeleteSize()
+    {
+        startSize--;
+    }
+
+
+    public int getSize()
+    {
+        return startSize;
+    }
+
+
+    /*
+    public void MoveInventory()
+    {
+        for(int i = 0; i < 5; i++)
+        {
+            listOfItems[i] = listOfItems[i + 1];
+        }
+        listOfItems[5] = null;
+    }
+    */
 }

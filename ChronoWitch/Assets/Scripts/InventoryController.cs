@@ -8,6 +8,12 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private InventorySO inventoryData;
     [SerializeField] private PlayerAgeSwitcher ageSwitcher;
     [SerializeField] private Timer timer;
+    [SerializeField] private PotionItemSO[] potions;
+    [SerializeField] private bool[] acquired;
+    [SerializeField] private GameObject barrier;
+    [SerializeField] private TMPro.TMP_Text potionText;
+
+    //[SerializeField] private int startSize = 0;
 
     public List<InventoryItems> initialItems = new List<InventoryItems>();
 
@@ -16,11 +22,14 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private AudioClip placeClip;
     [SerializeField] private AudioClip drinkPotionClip;
 
+
     public int modifyIndex;
     public float timeTillDeath;
     public int addTime;
+    public bool canPass = false;
+    public int sum = 0;
 
-    
+
     private void Start()
     {
         PrepareUI();
@@ -33,6 +42,7 @@ public class InventoryController : MonoBehaviour
         inventoryData.OnInventoryUpdated += UpdateInventoryUI;
         foreach(InventoryItems item in initialItems)
         {
+            Debug.Log(item);
             if (item.isEmpty)
                 continue;
             inventoryData.AddItem(item);
@@ -85,6 +95,8 @@ public class InventoryController : MonoBehaviour
         inventoryData.RemoveItem(itemIndex);
         inventoryUI.ResetSelection();
         audioSource.PlayOneShot(dropClip);
+        inventoryUI.DeleteSize();
+        //inventoryUI.MoveInventory();
     }
 
     public void PerformAction(int itemIndex)
@@ -108,6 +120,7 @@ public class InventoryController : MonoBehaviour
                 inventoryUI.ResetSelection();
 
             audioSource.PlayOneShot(drinkPotionClip);
+            inventoryUI.DeleteSize();
             PotionItemSO potion = (PotionItemSO)inventoryItem.item;
             modifyIndex = potion.modify;
             timeTillDeath = potion.timeTillDeath;
@@ -116,6 +129,16 @@ public class InventoryController : MonoBehaviour
                 ageSwitcher.SwitchAge(modifyIndex, timeTillDeath);
             else
                 timer.AddTime(addTime);
+            for(int i = 0; i < 6; i++)
+            {
+                if(acquired[i] == false && potions[i].name.Contains(potion.name))
+                {
+                    acquired[i] = true;
+                }
+                
+                
+            }
+            CheckIfPass();
             //Debug.Log(modifyIndex);
         }
     }
@@ -164,6 +187,23 @@ public class InventoryController : MonoBehaviour
             {
                 inventoryUI.Hide();
             }
+        }
+
+        //CheckIfPass();
+    }
+
+
+    public void CheckIfPass()
+    {
+        
+        for (int i = 0; i < 6; i++)
+            if(acquired[i] == true)
+                sum++;
+        potionText.text = sum.ToString();
+        if (sum == 6)
+        {
+            barrier.SetActive(false);
+            //Destroy(barrier);
         }
     }
 }

@@ -5,9 +5,42 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
+    path: Assets/Scenes/Room0.unity
+    guid: 2d39dacac29408a4c92a564cd58327fa
+  - enabled: 0
+    path: Assets/Scenes/Room1.unity
+    guid: 8b255705d85be354fb09fcaaa54c5f0f
+  - enabled: 0
+    path: Assets/Scenes/Room2.unity
+    guid: 89d3927a5bd553e40b33ee44e1abd7da
+  - enabled: 0
+    path: Assets/Scenes/Room3.unity
+    guid: 748d5b9aebbe62e4d98def7ef620970f
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 65b282ab05c53984c97dc52b9b44b10b
+  - enabled: 1
+    path: Assets/Scenes/BookOpening.unity
+    guid: 50b52a2d470fff64d83dfd3f92902827
+  - enabled: 1
+    path: Assets/Scenes/SandBox.unity
+    guid: 1633ae782920fe4499362d13ea89defc
+  - enabled: 1
+    path: Assets/Scenes/Room4.unity
+    guid: b6e15f85ae3cb8143be0ad2ab3ca33ea
+  - enabled: 1
+    path: Assets/Scenes/Room5.unity
+    guid: 7b2c2dd407c2d18468080c6d4ffbcdeb
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 296ad72633b790a4db4e0c7f25bd7558
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 87e399943fec9f747b3eefe746e446c3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

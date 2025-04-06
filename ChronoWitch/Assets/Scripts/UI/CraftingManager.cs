@@ -63,7 +63,7 @@ public class CraftingManager : MonoBehaviour
         {
             if(recipes[i] == currentRecipe)
             {
-                if (recipes[i] == currentRecipe)
+                if (currentRecipe.Contains(recipes[i]))
                 {
                     foundRecipe = true;
                     button.active = true;
@@ -107,10 +107,17 @@ public class CraftingManager : MonoBehaviour
     public void BrewPotion(Item craftedItem)
     {
         inventoryData.AddItem(craftedItem);
-        inventoryData.RemoveItem(6);
-        inventoryData.RemoveItem(7);
-        inventoryData.RemoveItem(8);
-        inventoryData.RemoveItem(9);
+        inventoryUI.AddSize();
+
+        for (int i = 6; i < 10; i++)
+        {
+            if (inventoryData.GetItemAt(i).item != null)
+            {
+                inventoryData.RemoveItem(i);
+                inventoryUI.DeleteSize();
+
+            }
+        }
         inventoryUI.ResetSelection();
 
         /*

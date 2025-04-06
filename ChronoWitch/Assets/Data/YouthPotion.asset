@@ -19,4 +19,5 @@ MonoBehaviour:
   modifierData: []
   <modify>k__BackingField: 1
   <actionSFX>k__BackingField: {fileID: 0}
-  <timeTillDeath>k__BackingField: 90
+  <addTime>k__BackingField: 0
+  <timeTillDeath>k__BackingField: 120
